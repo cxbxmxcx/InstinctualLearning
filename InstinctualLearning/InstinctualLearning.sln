@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28729.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstinctualLearning", "InstinctualLearning.csproj", "{80F98CA9-C1A7-47F7-997D-D443DD5C7889}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstinctualLearning.Console", "..\InstinctualLearning.Console\InstinctualLearning.Console.csproj", "{FE7CF9E8-AC42-4D74-922F-DCF126D93B77}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80F98CA9-C1A7-47F7-997D-D443DD5C7889}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80F98CA9-C1A7-47F7-997D-D443DD5C7889}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80F98CA9-C1A7-47F7-997D-D443DD5C7889}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80F98CA9-C1A7-47F7-997D-D443DD5C7889}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE7CF9E8-AC42-4D74-922F-DCF126D93B77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE7CF9E8-AC42-4D74-922F-DCF126D93B77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE7CF9E8-AC42-4D74-922F-DCF126D93B77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE7CF9E8-AC42-4D74-922F-DCF126D93B77}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9F13DA82-211B-49AB-A7D1-73E9EBEF9A7D}
+	EndGlobalSection
+EndGlobal
