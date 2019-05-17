@@ -12,12 +12,12 @@ using System.Linq;
 
 namespace InstinctualLearning
 {
-    public class EvolutionaryLearningSample<Environment> : ISampleController 
+    public class InstrinctualLearningSample<Environment> : ISampleController 
         where Environment : IEnvironment
     {
-        EvolutionaryLearningFitness<Environment> m_fitness;
+        InstinctualLearningFitness<Environment> m_fitness;
         private int m_maxOperations;
-        private List<EvolutionaryLearningInput> m_inputs;
+        private List<InstinctualLearningInput> m_inputs;
 
         public void ConfigGA(GeneticAlgorithm ga)
         {
@@ -32,7 +32,7 @@ namespace InstinctualLearning
         /// <returns>The sample chromosome.</returns>
         public IChromosome CreateChromosome()
         {
-            return new EvolutionaryLearningChromosome(m_fitness.AvailableOperations, m_maxOperations);
+            return new InstinctualLearningChromosome(m_fitness.AvailableOperations, m_maxOperations);
         }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace InstinctualLearning
         /// <param name="bestChromosome">The best chromosome.</param>
         public void Draw(IChromosome bestChromosome)
         {
-            var best = bestChromosome as EvolutionaryLearningChromosome;
+            var best = bestChromosome as InstinctualLearningChromosome;
 
             foreach (var input in m_inputs)
             {
@@ -98,7 +98,7 @@ namespace InstinctualLearning
            
             Console.WriteLine("Max operations: {0}", m_maxOperations);
             Console.WriteLine("Function: {0}", best.BuildFunction());
-            Console.WriteLine("Path followed: {0}", EvolutionaryLearningChromosome.Best);
+            Console.WriteLine("Path followed: {0}", InstinctualLearningChromosome.Best);
         }
 
         public void Initialize()
@@ -110,7 +110,7 @@ namespace InstinctualLearning
             Console.WriteLine("Sample2: 2,3,4=24");
             Console.WriteLine("When finish, type ENTER to start the GA.");
 
-            m_inputs = new List<EvolutionaryLearningInput>();
+            m_inputs = new List<InstinctualLearningInput>();
             do
             {
                 var parts = Console.ReadLine().Split('=');
@@ -125,7 +125,7 @@ namespace InstinctualLearning
 
                 var arguments = parts[0].Split(',');
 
-                var input = new EvolutionaryLearningInput(
+                var input = new InstinctualLearningInput(
                     arguments.Select(a => Convert.ToDouble(a)).ToList(),
                     Convert.ToDouble(parts[1]));
 
@@ -133,7 +133,7 @@ namespace InstinctualLearning
             }
             while (true);
 
-            m_fitness = new EvolutionaryLearningFitness<Environment>(m_inputs.ToArray());
+            m_fitness = new InstinctualLearningFitness<Environment>(m_inputs.ToArray());
         }
     }
 }

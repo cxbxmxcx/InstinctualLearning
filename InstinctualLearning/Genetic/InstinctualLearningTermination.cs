@@ -3,11 +3,11 @@ using GeneticSharp.Domain.Terminations;
 
 namespace InstinctualLearning
 {
-    public class EvolutionaryLearningTermination : ITermination
+    public class InstinctualLearningTermination : ITermination
     {
         private int v;
 
-        public EvolutionaryLearningTermination(int v)
+        public InstinctualLearningTermination(int v)
         {
             this.v = v;
         }

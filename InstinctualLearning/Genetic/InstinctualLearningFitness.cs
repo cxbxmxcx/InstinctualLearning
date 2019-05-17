@@ -6,24 +6,24 @@ using System.Collections.ObjectModel;
 
 namespace InstinctualLearning
 {
-    public class EvolutionaryLearningFitness<Environment> : IFitness where Environment : IEnvironment
+    public class InstinctualLearningFitness<Environment> : IFitness where Environment : IEnvironment
     {        
-        public EvolutionaryLearningFitness(params EvolutionaryLearningInput[] inputs)
+        public InstinctualLearningFitness(params InstinctualLearningInput[] inputs)
         {
             m_inputs = inputs;
             var parametersCount = m_inputs[0].Arguments.Count;
-            AvailableOperations = EvolutionaryLearningChromosome.BuildAvailableOperations(parametersCount);
-            m_parameterNames = EvolutionaryLearningChromosome.GetParameterNames(parametersCount);
+            AvailableOperations = InstinctualLearningChromosome.BuildAvailableOperations(parametersCount);
+            m_parameterNames = InstinctualLearningChromosome.GetParameterNames(parametersCount);
         }
 
         public ReadOnlyCollection<string> AvailableOperations { get; internal set; }
 
         private string[] m_parameterNames;
-        private EvolutionaryLearningInput[] m_inputs;
+        private InstinctualLearningInput[] m_inputs;
 
         public double Evaluate(IChromosome chromosome)
         {
-            var c = chromosome as EvolutionaryLearningChromosome;
+            var c = chromosome as InstinctualLearningChromosome;
             var function = c.BuildFunction();
 
             var fitness = 0.0;
@@ -54,7 +54,7 @@ namespace InstinctualLearning
                 for (int i = 0; i < episodes; i++)
                 {
                     var state = environment.State;
-                    if (state == 0 || state == 16)
+                    if (state == 16)
                     {
                         path += " " + "goal";                            
                         break;
@@ -63,6 +63,7 @@ namespace InstinctualLearning
                     inputs["A"] = state;
                     inputs["B"] = mem;
                     inputs["C"] = act;
+                    reward += (-1.0 / episodes);
                     
                    
                     act = (int)GetFunctionResult(action, inputs);                    
@@ -93,10 +94,10 @@ namespace InstinctualLearning
             //        return double.MinValue;
             //    }
             //}
-            if (reward > EvolutionaryLearningChromosome.BestReward)
+            if (reward > InstinctualLearningChromosome.BestReward)
             {
-                EvolutionaryLearningChromosome.BestReward = reward;
-                EvolutionaryLearningChromosome.Best = path;
+                InstinctualLearningChromosome.BestReward = reward;
+                InstinctualLearningChromosome.Best = path;
             }
 
             return reward-1;
@@ -142,7 +143,7 @@ namespace InstinctualLearning
         /// <returns>The function result.</returns>
         /// <param name="function">The function.</param>
         /// <param name="input">The arguments values and expected results of the function.</param>
-        public double GetFunctionResult(string function, EvolutionaryLearningInput input)
+        public double GetFunctionResult(string function, InstinctualLearningInput input)
         {
             //var func = Parser<DoubleEvaluator>.Parse(function);
 

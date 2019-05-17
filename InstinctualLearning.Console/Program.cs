@@ -8,9 +8,9 @@ namespace InstinctualLearning.Console
     {
         static void Main(string[] args)
         {
-            var selectedSampleName = "EvolutionLearningSample";
+            var selectedSampleName = "InstinctualLearningSample";
 
-            var sampleController = new EvolutionaryLearningSample<GridWorldEnvironment>();
+            var sampleController = new InstrinctualLearningSample<GridWorldEnvironment>();
 
             // var sampleController = TypeHelper.CreateInstanceByName<ISampleController>(selectedSampleName);
             DrawSampleName(selectedSampleName);

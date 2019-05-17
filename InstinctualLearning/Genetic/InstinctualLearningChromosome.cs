@@ -11,7 +11,7 @@ namespace InstinctualLearning
     /// <summary>
     /// Gene Expression TensforFlow chromosome
     /// </summary>
-    public sealed class EvolutionaryLearningChromosome : ChromosomeBase
+    public sealed class InstinctualLearningChromosome : ChromosomeBase
     {
         public static string Best;
         public static double BestReward = double.MinValue;
@@ -34,7 +34,7 @@ namespace InstinctualLearning
         /// </summary>
         /// <param name="availableOperations">Available operations.</param>
         /// <param name="maxOperations">Max operations.</param>
-        public EvolutionaryLearningChromosome(ReadOnlyCollection<string> availableOperations, int maxOperations) : base(maxOperations)
+        public InstinctualLearningChromosome(ReadOnlyCollection<string> availableOperations, int maxOperations) : base(maxOperations)
         {
             m_availableOperations = availableOperations;
             m_maxOperations = maxOperations;
@@ -103,7 +103,7 @@ namespace InstinctualLearning
         /// <returns>The new chromosome.</returns>
         public override IChromosome CreateNew()
         {
-            return new EvolutionaryLearningChromosome(m_availableOperations, m_maxOperations);
+            return new InstinctualLearningChromosome(m_availableOperations, m_maxOperations);
         }
 
         /// <summary>

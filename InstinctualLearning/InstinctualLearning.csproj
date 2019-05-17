@@ -53,14 +53,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\EvolutionLearningSample.cs" />
+    <Compile Include="Controllers\InstinctualLearningSample.cs" />
     <Compile Include="Controllers\ISampleController.cs" />
     <Compile Include="Environments\GridWorldEnvironment.cs" />
     <Compile Include="Environments\IEnvironment.cs" />
-    <Compile Include="Genetic\EvolutionaryLearningChromosome.cs" />
-    <Compile Include="Genetic\EvolutionaryLearningFitness.cs" />
-    <Compile Include="Genetic\EvolutionaryLearningInput.cs" />
-    <Compile Include="Genetic\EvolutionaryLearningTermination.cs" />
+    <Compile Include="Genetic\InstinctualLearningChromosome.cs" />
+    <Compile Include="Genetic\InstinctualLearningFitness.cs" />
+    <Compile Include="Genetic\InstinctualLearningInput.cs" />
+    <Compile Include="Genetic\InstinctualLearningTermination.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

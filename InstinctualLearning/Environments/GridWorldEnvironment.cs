@@ -16,15 +16,7 @@
         public double FinalReward
         {
             get
-            {
-                //if (state == size*size) return 1.0; //made the goal
-
-                //var c = state % size;
-                //var h = state / size;
-
-                //var count = size - (h + ((size-1)-c));
-
-                //return 1.0 - (.1 * count);
+            {               
 
                 switch (state)
                 {
@@ -111,39 +103,7 @@
 
 
         public double Act(double act)
-        {
-            //var max = size * size;
-            //var c = state % size;
-            //var h = state / size;
-            //switch (act)
-            //{
-            //    case 1:
-            //        if (state > 4) state = state - 4;
-            //        break;
-            //    case 2:
-            //        if (state < max)
-            //        {
-            //            if (state % size != 0) state = state + 1;
-            //        }
-            //        break;
-            //    case 3:
-            //        if(state < max)
-            //        {
-            //            state = state + 4;
-            //        }
-            //        break;
-            //    case 4:
-            //        if (state > 1)
-            //        {
-            //            if(state % size != 1)
-            //            {
-            //            }
-            //        }                  
-            //        break;
-            //    default:
-            //        break;
-            //}
-
+        {    
             switch ((int)act)
             {
                 case 1:
@@ -177,7 +137,7 @@
                 default:
                     break;
             }
-            state = state == 16 ? 0 : state;
+            state = state == 16 ? 16 : state;
 
             return 0.0;
         }

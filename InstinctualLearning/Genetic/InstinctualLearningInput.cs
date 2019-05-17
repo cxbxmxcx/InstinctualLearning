@@ -9,7 +9,7 @@ namespace InstinctualLearning
     /// <summary>
     /// Function builder input.
     /// </summary>
-    public class EvolutionaryLearningInput
+    public class InstinctualLearningInput
     {
         #region Constructors        
         /// <summary>
@@ -17,7 +17,7 @@ namespace InstinctualLearning
         /// </summary>
         /// <param name="arguments">The arguments.</param>
         /// <param name="expectedResult">The expected result.</param>
-        public EvolutionaryLearningInput(IList<double> arguments, double expectedResult)
+        public InstinctualLearningInput(IList<double> arguments, double expectedResult)
         {
             Arguments = arguments;
             ExpectedResult = expectedResult;
