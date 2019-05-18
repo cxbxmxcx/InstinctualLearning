@@ -1,7 +1,5 @@
 # Instinctual Learning and Instinctual Reinforcement Learning
 
-Source: BBC
-
 *I want to introduce this technical series of blog posts that outline a concept I have been working on for some time. Currently, I refer to this concept as Instinctual and Instinctual Reinforcement Learning. This concept crosses many areas of machine learning from evolutionary algorithms, gene expression programming to deep learning and reinforcement learning. It is therefore not intended for novices or layman, as many of my other blog posts are.*
 
 [Source code for this article.](https://github.com/cxbxmxcx/InstinctualLearning)
